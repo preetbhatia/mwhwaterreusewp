@@ -20,7 +20,6 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-
 body {
     font-family: arial;
     color: #231f20;
@@ -71,7 +70,8 @@ a:hover {
 .nav li a {
     color: #000;
     font-size: 15px;
-    padding: 8px 30px;
+    margin: 0 15px;
+    padding: 8px 10px;
 }
 
 .nav li a:hover,
@@ -617,6 +617,7 @@ ul.cnss-social-icon li {
     -o-transform: translateY(-40%);
     -ms-transform: translateY(-40%);
     transform: translateY(-40%);
+    padding: 0 20px;
 }
 
 .hover_data b {
@@ -650,8 +651,9 @@ ul.cnss-social-icon li {
 }
 
 .full_data h4 {
-    font-size: 40px;
     color: #0483a9;
+    font-size: 40px;
+    padding-right: 80px;
     position: relative;
 }
 
@@ -843,7 +845,8 @@ ul.cnss-social-icon li {
 .main-menu.navbar-default .navbar-nav > .active > a,
 .main-menu.navbar-default .navbar-nav > .active > a:hover,
 .main-menu.navbar-default .navbar-nav > .active > a:focus {
-    background-color: #fff;
+    background-color: transparent;
+    border-bottom: 2px solid #6f6d6d;
     color: #555;
 }
 
@@ -916,7 +919,14 @@ ul.cnss-social-icon li {
 .marketo-form div:empty {
     display: none;
 }
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #0483a9;
 
+}
+.nav .dropdown-menu  li a {
+  margin: 0;
+  padding: 6px 15px;
+}
 .marketo-form .mktoButton {
     background: none !important;
     height: 40px;
@@ -949,7 +959,10 @@ ul.cnss-social-icon li {
     right: auto !important;
     top: 66px;
 }
-
+.main-menu .navbar-right .dropdown-menu {
+  left: auto;
+  right: auto;
+}
 
 /*Contact Marketo form*/
 
@@ -1201,7 +1214,22 @@ ul.cnss-social-icon li {
 
 @media only screen and (max-width: 767px) {
     .main-menu .dropdown {
-        padding-right: 100px;
+        padding-right: 0;
+    }
+ .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 5px;
+}
+    .main-menu.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .main-menu.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .main-menu.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 2px solid #6f6d6d;
+}
+    .main-menu .dropdown-menu > li > a {
+        font-size: 12px !important;
+    }
+    .nav li a {
+        margin: 0;
+        padding: 8px 0;
     }
     .capabilities-repeater {
         height: auto;
@@ -1258,7 +1286,7 @@ ul.cnss-social-icon li {
     .teams_grid_wrap > li:nth-child(2n+2) {
         margin-right: 0;
     }
-    ..teams_grid_wrap{
+    ..teams_grid_wrap {
         text-align: center;
     }
     .teams_grid_wrap > li {
@@ -1324,19 +1352,18 @@ ul.cnss-social-icon li {
         width: 100%;
     }
     .banner > img {
-  width: 988px;
-}
+        width: 988px;
+    }
     .bnr_data {
-    -webkit-transform: translateY(-8%);
-    -moz-transform: translateY(-8%);
-    -o-transform: translateY(-8%);
-    -ms-transform: translateY(-8%);
-    transform: translateY(-8%);
+        -webkit-transform: translateY(-8%);
+        -moz-transform: translateY(-8%);
+        -o-transform: translateY(-8%);
+        -ms-transform: translateY(-8%);
+        transform: translateY(-8%);
     }
 }
 
 @media only screen and (max-width: 480px) {
-
     .marketo-form .mktoFormRow {
         margin-right: 0% !important;
         width: 100% !important;
@@ -1373,6 +1400,7 @@ ul.cnss-social-icon li {
     .full_data h4 {
         font-size: 27px;
         padding-top: 30px;
+        padding-right: 0;
     }
     .close_btn {
         position: absolute;
