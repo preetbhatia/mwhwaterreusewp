@@ -151,7 +151,7 @@ require get_template_directory() . '/inc/jetpack.php';
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
 
-
+/*
 function wpdocs_codex_book_init() {
     $labels = array(
         'name'                  => _x( 'Capabilities', 'Post type general name', 'textdomain' ),
@@ -195,4 +195,4 @@ function wpdocs_codex_book_init() {
     register_post_type( 'capabilities', $args );
 }
  
-add_action( 'init', 'wpdocs_codex_book_init' );
+add_action( 'init', 'wpdocs_codex_book_init' );*/
